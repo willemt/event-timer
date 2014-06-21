@@ -52,7 +52,6 @@ typedef struct
 {
     time_t time;
     heap_t *heap;
-
 } eventtimer_t;
 
 typedef struct
@@ -84,10 +83,6 @@ void *eventtimer_new(
     return tk;
 }
 
-/**
- * @param nsecs - run this event in this many seconds
- * @param udata - use this data for the event function
- * @param func - run this event function */
 void eventtimer_push_event(
     void *ti,
     int nsecs,
@@ -105,8 +100,6 @@ void eventtimer_push_event(
     heap_offer(tk->heap, ev);
 }
 
-/**
- * Poll any events that need to be triggered */
 void eventtimer_step(
     void *ti
 )
