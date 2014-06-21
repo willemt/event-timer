@@ -7,6 +7,6 @@
   "license": "BSD",
   "dependencies": {
     "willemt/heap": "*"
-  }
+  },
   "src": ["event_timer.c", "event_timer.h"]
 }
